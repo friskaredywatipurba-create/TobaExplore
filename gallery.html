@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TobaExperience | Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+   
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('images/Alam danau toba.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .hero {
+            width: 95%;
+            max-width: 1100px;
+            height: 350px;
+            margin: 100px auto 0; 
+            border-radius: 30px;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/LikeToba.jpg') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            box-shadow: 0 5px 20px rgba(187, 231, 10, 0.849);
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.8);
+        }
+        .title-wrapper {
+            margin-top: 50px;    
+            margin-bottom: 50px; 
+            display: flex;       
+            justify-content: center;
+        }
+        .glass-box {
+            background: rgba(255, 255, 255, 0.7); 
+            backdrop-filter: blur(15px);           
+            -webkit-backdrop-filter: blur(15px);
+            padding: 40px 20px;
+            border-radius: 25px;
+            width: 100%;             
+            max-width: 1100px;       
+            box-shadow: 0 5px 10px rgb(201, 255, 8);
+            border: 1px solid rgba(255,255,255,0.4);
+            text-align: center;
+        }
+        .glass-box h2 {
+            color: #01416e;
+            font-size: 2.2rem;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+        .line-accent {
+            width: 60px;
+            height: 5px;
+            background: #ffc107;
+            margin: 20px auto 0;
+            border-radius: 10px;
+        }
+        .gallery-section {
+            padding: 40px 20px;
+            background-color: rgba(18, 18, 18, 0.9);
+            border-radius: 30px;
+            max-width: 1100px; 
+            margin: 0 auto 60px; 
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+        .gallery-item {
+            background: #1e1e1e;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid #333;
+            transition: all 0.4s ease;
+        }
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+            border-color: #ffc107;
+        }
+        .img-wrapper { 
+            width: 100%; height: 200px; overflow: hidden;
+         }
+        .img-wrapper img { 
+            width: 100%; height: 100%; object-fit: cover; transition: 0.6s; 
+        }
+        .gallery-item:hover img {
+             transform: scale(1.1); 
+        }
+        .gallery-info {
+             padding: 15px;
+        }
+        .gallery-info h3 {
+             font-size: 1.1rem; color: #ffffff; margin-bottom: 8px; 
+        }
+        .gallery-info p {
+             font-size: 0.85rem; color: #aaaaaa; margin: 0; 
+        }
+        .main-footer {
+            color: #ffffff;
+            padding: 60px 0 30px;
+            margin: 50px 20px 20px;
+            border-radius: 30px;
+            backdrop-filter: blur(5px);
+            text-align: center;
+        }
+        .footer-column h3 {
+            font-weight: bold;
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+            color: #ffc107;
+        }
+        .footer-column p, .footer-column a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 0.95rem;
+            display: block;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        .footer-column a:hover {
+            color: #378bff;
+            padding-left: 5px;
+            transition: 0.3s;
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 40px;
+            padding-top: 25px;
+            text-align: center;
+            color: #ffe100;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="gallery.html">TobaExperience</a>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active"href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="budaya.html">Budaya</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kuliner.html">Kuliner</a></li>
+                    <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+    <h1>Gallery Wisata</h1>
+    <p>Jelajahi Keindahan Alam dan Budaya Batak</p>
+    <div id="greeting-box" style="color:#ffc107; font-size:18px; margin-top: 20px; font-weight: 500;"></div>
+        <div class="d-flex justify-content-center gap-3">
+                    <a href="budaya.html" class="btn btn-warning btn-lg shadow">Telusuri budaya</a>
+        </div>
+</section>
+
+<div class="title-wrapper">
+    <div class="glass-box">
+        <h2 style="color: #01416e; font-weight: bold;">Keindahan dalam Gambar</h2>
+        <p style="color: #333;">Jelajahi koleksi foto-foto menakjubkan dari Danau Toba dan sekitarnya</p>
+        <div class="line-accent"></div>
+    </div>
+</div>
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid">
+            <div class="gallery-item">
+                <div class="img-wrapper"><img src="images/bukit holbung.jpg" alt="Bukit Holbung"></div>
+                <div class="gallery-info"><h3>Bukit Holbung</h3><p>Pesona bukit hijau dengan panorama Danau Toba yang menenangkan hati.</p></div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="img-wrapper"><img src="images/air terjun sipiso-piso.jpg" alt="Sipiso-piso"></div>
+                <div class="gallery-info"><h3>Sipiso-piso</h3><p>Air terjun tunggal tertinggi di Indonesia yang jatuh dari celah bukit.</p></div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="img-wrapper"><img src="images/desa  budaya wisata tomok.jpg" alt="Desa Tomok"></div>
+                <div class="gallery-info"><h3>Desa Tomok</h3><p>Gerbang masuk ke sejarah dan budaya Batak di Pulau Samosir.</p></div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="img-wrapper"><img src="images/huta siallagan budaya batak.jpeg" alt="Huta Siallagan"></div>
+                <div class="gallery-info"><h3>Huta Siallagan</h3><p>Melihat situs kursi batu tempat pengadilan adat Raja Batak zaman dulu.</p></div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="img-wrapper"><img src="images/menara padang tele.jpg" alt="Menara Tele"></div>
+                <div class="gallery-info"><h3>Menara Tele</h3><p>Titik pandang terbaik untuk melihat keseluruhan Danau Toba secara utuh.</p></div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="img-wrapper"><img src="images/pantai pasir putih parbaba.jpg" alt="Pantai Parbaba"></div>
+                <div class="gallery-info"><h3>Pantai Parbaba</h3><p>Pantai pasir putih yang landai dengan air danau tawar yang segar.</p></div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="img-wrapper"><img src="images/Gunung Pusuk Buhit.jpg" alt="Pusuk Buhit"></div>
+                <div class="gallery-info"><h3>Pusuk Buhit</h3><p>Gunung penuh mitos yang dianggap tempat lahirnya suku Batak.</p></div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="img-wrapper"><img src="images/lembah bakkara.jpeg" alt="Bakkara"></div>
+                <div class="gallery-info"><h3>Lembah Bakkara</h3><p>Lembah subur kediaman para raja dengan mata air yang suci.</p></div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="img-wrapper"><img src="images/pulau sibandang.jpeg" alt="Sibanduon"></div>
+                <div class="gallery-info"><h3>Pulau Sibanduon</h3><p>Wisata pulau tenang untuk kamu yang ingin menyendiri di alam.</p></div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="img-wrapper"><img src="images/taman simalem resort.jpg" alt="Simalem"></div>
+                <div class="gallery-info"><h3>Taman Simalem</h3><p>Merasakan udara sejuk pegunungan di sisi utara Danau Toba.</p></div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="img-wrapper"><img src="images/perkebunan kopi lintong.jpg" alt="Kebun Kopi"></div>
+                <div class="gallery-info"><h3>Kebun Kopi Lintong</h3><p>Melihat proses pengolahan kopi legendaris khas Sumatera Utara.</p></div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="img-wrapper"><img src="images/bukit gajah bobok.jpg" alt="Gajah Bobok"></div>
+                <div class="gallery-info"><h3>Gajah Bobok</h3><p>Menutup petualangan dengan camping seru di atas bukit.</p></div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-column mb-4">
+                    <h3>Tentang Toba Experience</h3>
+                    <p>Jelajahi keindahan dan kekayaan budaya Danau Toba bersama kami untuk pengalaman yang tak terlupakan.</p>
+                </div>
+                <div class="col-md-4 footer-column mb-4">
+                    <h3>Kontak Kami</h3>
+                    <p>📧 Email: info@tobaexperience.com</p>
+                    <p>📞 Telp: +62 8226 1971 860</p>
+                    <p>📍 Alamat: Jl. Siborongborong - Parapat, Kecamatan Balige, Sumatera Utara.</p>
+                </div>
+                <div class="col-md-4 footer-column mb-4">
+                    <h3>Ikuti Kami</h3>
+                    <div class="d-flex flex-column">
+                        <a href="https://www.facebook.com/friska.purba.106" target="_blank">Facebook: friska.purba</a>
+                        <a href="https://www.instagram.com/friskaaprb?igsh=MXRwcDA3NDM4ZWtvZQ==" target="_blank">Instagram: @friskaa.prb</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2026 TobaExperience | Friska Redy Wati Purba – 251011700022
+            </div>
+        </div>
+    </footer>
+
+  <script>
+        function updateTime() {
+            const now = new Date();
+            const days = ["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"];
+            const months = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+           
+            let h = now.getHours(), m = now.getMinutes(), s = now.getSeconds();
+            h = h < 10 ? "0" + h : h;
+            m = m < 10 ? "0" + m : m;
+            s = s < 10 ? "0" + s : s;
+
+            let greeting = "";
+            if (h >= 5 && h < 12) greeting = "Selamat Pagi, selamat datang di TobaExperience 🌄";
+            else if (h >= 12 && h < 17) greeting = "Selamat Siang, selamat datang di TobaExperience ☀️";
+            else if (h >= 17 && h < 19) greeting = "Selamat Sore, selamat datang di TobaExperience 🌅";
+            else greeting = "Selamat Malam, selamat datang di TobaExperience 🌙";
+
+            const dateString = `${days[now.getDay()]}, ${now.getDate()} ${months[now.getMonth()]} ${now.getFullYear()}`;
+            document.getElementById('greeting-box').innerHTML = `${greeting}<br>${dateString} | ${h}:${m}:${s}`;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</body>
+</html>
