@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TobaExperience | Experience</title>
+
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('images/Alam danau toba.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar {
+      backdrop-filter: blur(10px);
+      background-color: rgba(33, 37, 41, 0.9) !important;
+    }
+    .hero {
+      position: relative;
+      width: 95%;
+      max-width: 1100px;
+      height: 350px;
+      margin: 100px auto 25px;
+      border-radius: 30px;
+      background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url('images/LikeToba.jpg') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 10px 15px rgba(194, 255, 90, 0.892);
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 10px;
+      text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.8);
+    }
+    #greeting-box {
+      color: #ffc107;
+      font-size: 18px;
+      margin-top: 20px;
+      font-weight: 500;
+      text-align: center;
+    }
+    .exp-card {
+      background: #fff;
+      overflow: hidden;
+      border-radius: 50px;
+      box-shadow: 0 10px 25px rgba(161, 180, 17, 0.825);
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+    .exp-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+    .exp-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    .exp-body {
+      padding: 16px;
+    }
+    .exp-body h3 {
+      font-size: 1.2rem;
+    }
+    .exp-body p {
+      font-size: 0.9rem;
+    }
+    .exp-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 15px;
+      border-top: 1px solid #eee;
+    }
+    .exp-duration {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    .exp-price {
+      font-weight: 700;
+      font-size: 1rem;
+      color: #0d6efd;
+    }
+    .reservasi-card {
+      max-width: 800px;
+      border-radius: 25px;
+      border: none;
+      box-shadow: 0 15px 10px rgba(187, 255, 0, 0.918);
+    }
+    .form-label {
+      font-weight: 600;
+      color: #171716;
+    }
+    .form-control {
+      border-radius: 12px;
+    }
+    .btn-reservasi {
+      background: linear-gradient(135deg, #1B4965, #2EC4B6);
+      color: rgb(109, 67, 67);
+      font-weight: 600;
+      border-radius: 30px;
+      border: none;
+    }
+    .btn-reservasi:hover {
+      box-shadow: 0 10px 25px rgba(0,0,0,.25);
+    }
+    .main-footer {
+      color: #ffffff;
+      padding: 60px 0 30px;
+      margin: 50px 20px 20px;
+      border-radius: 30px;
+      backdrop-filter: blur(5px);
+      text-align: center;
+    }
+    .footer-column h3 {
+      font-weight: bold;
+      margin-bottom: 25px;
+      font-size: 1.3rem;
+      color: #ffc107;
+    }
+    .footer-column p,
+    .footer-column a {
+      color: #e0e0e0;
+      text-decoration: none;
+      font-size: 0.95rem;
+      display: block;
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+    .footer-column a:hover {
+      color: #378bff;
+      padding-left: 5px;
+      transition: 0.3s;
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 40px;
+      padding-top: 25px;
+      color: #ffe100;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    @media (max-width: 576px) {
+      .hero h1 {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+      }
+
+      .hero p {
+        font-size: 0.9rem;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<!--NAVBAR-->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="experience.html">TobaExperience</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="experience.html">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="budaya.html">Budaya</a></li>
+        <li class="nav-item"><a class="nav-link" href="kuliner.html">Kuliner</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!--HERO-->
+<section class="hero">
+  <h1>Ayo Ikuti Aktivitas Seru di Danau Toba</h1>
+  <p>Jelajahi Keindahan Alamnya, Budayanya, Tradisi daerahnya dan nikmati Kuliner Khas Toba.</p>
+
+  <div id="greeting-box"></div>
+
+  <div class="d-flex justify-content-center gap-3">
+    <a href="experience.html" class="btn btn-warning btn-lg shadow">
+      Experience Sekarang
+    </a>
+  </div>
+</section>
+
+<!--EXPERIENCE-->
+<section class="experience-section">
+  <div class="container">
+    <div class="row g-3 justify-content-center">
+
+            
+            <div class="col-md-6 col-lg-6">
+                <div class="exp-card">
+                    <img src="images/desa  budaya wisata tomok.jpg" alt="Bersepeda">
+                    <div class="exp-body">
+                        <h3>Bersepeda Keliling Pulau Samosir</h3>
+                        <p>Jelajahi keindahan Pulau Samosir dengan bersepeda. Anda akan melewati desa-desa tradisional, sawah, dan pemandangan danau yang indah.</p>
+                        <div class="exp-footer">
+                            <span class="exp-duration">Durasi: 3-4 jam</span>
+                            <span class="exp-price">Rp 50.000 - 75.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-6">
+                <div class="exp-card">
+                    <img src="images/huta siallagan budaya batak.jpeg" alt="Desa Tradisional">
+                    <div class="exp-body">
+                        <h3>Kunjungan ke Desa Tradisional</h3>
+                        <p>Kunjungi desa tradisional Batak dan pelajari tentang budaya, arsitektur rumah adat, dan kehidupan sehari-hari masyarakat lokal.</p>
+                        <div class="exp-footer">
+                            <span class="exp-duration">Durasi: 2-3 jam</span>
+                            <span class="exp-price">Rp 100.000 - 200.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-6">
+                <div class="exp-card">
+                    <img src="images/air terjun sipiso-piso.jpg" alt="Air Panas">
+                    <div class="exp-body">
+                        <h3>Air Terjun Sipiso-piso</h3>
+                        <p>air terjun ikonik di Desa Tongging, Karo, Sumatera Utara, terkenal karena ketinggiannya yang mencapai 120 meter dan bentuknya yang menyerupai "pisau" tajam, berasal dari bahasa Karo.</p>
+                        <div class="exp-footer">
+                            <span class="exp-duration">Durasi: 1-2 jam</span>
+                            <span class="exp-price">Rp 20.000 - 50.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-6">
+                <div class="exp-card">
+                    <img src="images/musik gondang batak.jpg" alt="Pertunjukan Seni">
+                    <div class="exp-body">
+                        <h3>Menyaksikan Pertunjukan Seni</h3>
+                        <p>Saksikan pertunjukan tari Tor-Tor dan musik tradisional Batak. Beberapa tempat juga menawarkan workshop untuk belajar tarian tradisional.</p>
+                        <div class="exp-footer">
+                            <span class="exp-duration">Durasi: 1-2 jam</span>
+                            <span class="exp-price">Rp 50.000 - 150.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- FORM -->
+<section class="reservasi-section py-5" id="formReservasi">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">Form Reservasi</h2>
+
+    <div class="card reservasi-card mx-auto">
+      <div class="card-body p-5">
+
+        <form class="row g-4" onsubmit="kirimReservasi(event)">
+
+          <div class="col-md-6">
+            <label class="form-label">Nama Lengkap</label>
+            <input type="text" class="form-control" required>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" required>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">Experience Dipilih</label>
+            <select id="experienceInput" class="form-control" onchange="pilihExperience()" required>
+  <option value="">-- Pilih Experience --</option>
+  <option value="Bersepeda Keliling Pulau Samosir" data-harga="75000">
+    Bersepeda Keliling Pulau Samosir
+  </option>
+  <option value="Kunjungan ke Desa Tradisional" data-harga="150000">
+    Kunjungan ke Desa Tradisional
+  </option>
+  <option value="Air Terjun Sipiso-piso" data-harga="50000">
+    Air Terjun Sipiso-piso
+  </option>
+  <option value="Pertunjukan Seni Batak" data-harga="100000">
+    Pertunjukan Seni Batak
+  </option>
+</select>
+
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">Tanggal Kunjungan</label>
+            <input type="date" class="form-control" required>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">Jumlah Peserta</label>
+            <input type="number" id="jumlah" class="form-control" oninput="hitungTotal()" required>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">Harga / Orang</label>
+            <input type="text" id="harga" class="form-control" readonly>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">Total Harga</label>
+            <input type="text" id="total" class="form-control" readonly>
+          </div>
+
+          <div class="col-12">
+            <label class="form-label">Catatan Tambahan</label>
+            <textarea class="form-control" rows="3"></textarea>
+          </div>
+
+          <div class="col-12 text-center">
+            <button class="btn btn-reservasi px-5 py-2">Kirim Reservasi</button>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-column mb-4">
+                    <h3>Tentang Toba Experience</h3>
+                    <p>Jelajahi keindahan dan kekayaan budaya Danau Toba bersama kami untuk pengalaman yang tak terlupakan.</p>
+                </div>
+                <div class="col-md-4 footer-column mb-4">
+                    <h3>Kontak Kami</h3>
+                    <p>📧 Email: info@tobaexperience.com</p>
+                    <p>📞 Telp: +62 8226 1971 860</p>
+                    <p>📍 Alamat: Jl. Siborongborong - Parapat, Kecamatan Balige, Sumatera Utara.</p>
+                </div>
+                <div class="col-md-4 footer-column mb-4">
+                    <h3>Ikuti Kami</h3>
+                    <div class="d-flex flex-column">
+                        <a href="https://www.facebook.com/friska.purba.106" target="_blank">Facebook: friska.purba</a>
+                        <a href="https://www.instagram.com/friskaaprb?igsh=MXRwcDA3NDM4ZWtvZQ==" target="_blank">Instagram: @friskaa.prb</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2026 TobaExperience | Friska Redy Wati Purba – 251011700022
+            </div>
+        </div>
+    </footer>
+
+  <script>
+        function updateTime() {
+            const now = new Date();
+            const days = ["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"];
+            const months = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+           
+            let h = now.getHours(), m = now.getMinutes(), s = now.getSeconds();
+            h = h < 10 ? "0" + h : h;
+            m = m < 10 ? "0" + m : m;
+            s = s < 10 ? "0" + s : s;
+
+            let greeting = "";
+            if (h >= 5 && h < 12) greeting = "Selamat Pagi, selamat datang di TobaExperience 🌄";
+            else if (h >= 12 && h < 17) greeting = "Selamat Siang, selamat datang di TobaExperience ☀️";
+            else if (h >= 17 && h < 19) greeting = "Selamat Sore, selamat datang di TobaExperience 🌅";
+            else greeting = "Selamat Malam, selamat datang di TobaExperience 🌙";
+
+            const dateString = `${days[now.getDay()]}, ${now.getDate()} ${months[now.getMonth()]} ${now.getFullYear()}`;
+            document.getElementById('greeting-box').innerHTML = `${greeting}<br>${dateString} | ${h}:${m}:${s}`;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</body>
+</html>
